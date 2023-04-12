@@ -8,8 +8,29 @@ This is possibly the most broken and inefficient script you have ever seen, but 
 
 This was meant to stay trivial and not become so advanced that it overlaps in function other utilities that do similar things, but work is still needed to make this more generalized and more intelligent if it's going to stay on GitHub. 
 
+
 ## TODO
 
-As a bare minimum, this script needs to be split into functions, so that you can for example call it with `spawn` or `attach` or `cleanup` parameters, then the podman creation string needs to be split in a more intelligent way.
+- Cleanup function
+- Attach function
+- Start function
+- Stop function
+- SSH connections
 
-The SSH implementation is not working yet, so it's due for a either a fix or a removal since it shouldn't be needed in first place.
+
+## Tmux cheat sheet: 
+| Shortcut          |   Description |
+| ------------------|---------------|
+| CTRL+B N          | [N]ext window |
+| CTRL+B P          | [P]revious window |
+| ------------------|---------------|
+| CTRL+B D          | [D]etach |
+| tmux a            | Attach to last session |
+| tmux ls           | List sessions |
+| tmux a -t MY1     | Attach to tmux session named MY1 |
+| ------------------|---------------|
+| CTRL+B C          | New window | 
+| CTRL+B "          | Split vertically | 
+| CTRL+B %          | Split vertically | 
+
+To interact with nested tmuxes on the hosts, use CTRL+B+B
